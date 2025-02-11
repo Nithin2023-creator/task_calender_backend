@@ -1,18 +1,19 @@
 {
-  "name": "task_calender_backend",
+  "name": "task-management-backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.10.0",
-    "vercel": "^41.0.3"
+    "mongoose": "^8.9.3"
   }
 }
