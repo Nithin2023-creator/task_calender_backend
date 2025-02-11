@@ -32,9 +32,9 @@ app.get('/tasks', async (req, res) => {
     res.json(tasks);
 });
 app.get('/', async (req, res) => {
-   
-    res.json(message: 'welcome');
+    res.json({ message: 'welcome' });
 });
+
 
 // Add a new task
 app.post('/tasks', async (req, res) => {
