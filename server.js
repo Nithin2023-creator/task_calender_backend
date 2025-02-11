@@ -31,6 +31,10 @@ app.get('/tasks', async (req, res) => {
     const tasks = await Task.find({ date });
     res.json(tasks);
 });
+app.get('/', async (req, res) => {
+   
+    res.json(message: 'welcome');
+});
 
 // Add a new task
 app.post('/tasks', async (req, res) => {
