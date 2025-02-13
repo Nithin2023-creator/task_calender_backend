@@ -37,12 +37,17 @@ app.get('/', async (req, res) => {
 
 
 // Add a new task
+// Add a new task
 app.post('/tasks', async (req, res) => {
-    const { date, category, title, description } = req.body;
-    const newTask = new Task({ date, category, title, description });
-    await newTask.save();
-    res.json(newTask);
-});
+    try {
+      const { date, category, title, description } = req.body;
+      const newTask = new Task({ date, category, title, description });
+      await newTask.save();
+      res.status(201).json(newTask);
+    } catch (error) {
+      res.status(500).json({ message: 'Failed to create task', error: error.message });
+    }
+  });
 
 // Update a task
 app.put('/tasks/:id', async (req, res) => {
